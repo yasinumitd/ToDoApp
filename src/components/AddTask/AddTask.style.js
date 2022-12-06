@@ -14,13 +14,22 @@ export default StyleSheet.create({
         padding:5,
         fontSize:20,
         borderRadius:10,
-        
+        color: 'white'
       },
       button: {
         margin:15,
         padding:5,
         borderRadius:10,
         backgroundColor: 'orange',
+        alignItems:"center"
+
+        
+      },
+      buttonPasive: {
+        margin:15,
+        padding:5,
+        borderRadius:10,
+        backgroundColor: 'grey',
         alignItems:"center"
 
         

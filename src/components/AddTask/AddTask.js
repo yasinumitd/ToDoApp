@@ -2,11 +2,20 @@ import React from "react";
 import { TextInput,TouchableOpacity,View,Text } from "react-native";
 import styles from './AddTask.style'
 
-function AddTask({text,setText,addNewTask}){
+function AddTask({text,setText,tasks,setTasks}){
 
     const Separator = () => (
         <View style={styles.separator} />
       );
+
+      function addNewTask(title){
+        if(title===''){
+          Alert.alert('Please enter a task!')
+        }else{
+          setTasks([...tasks, {id:Date.now(), title: title,isDone:false}]);
+          setText('')
+        }
+      }
    
     return(
         <View style={styles.conteiner}>
@@ -19,7 +28,7 @@ function AddTask({text,setText,addNewTask}){
             />
             <Separator></Separator>
             <TouchableOpacity 
-            style={styles.button}
+            style={text.length>0 ? styles.button : styles.buttonPasive}
             onPress={() => addNewTask(text)}>
                 <Text style={styles.buttonText}>KAYDET</Text>
             </TouchableOpacity>
