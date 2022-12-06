@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { View,Text,StyleSheet, SafeAreaView, Alert, FlatList,TouchableOpacity } from "react-native";
+import { View,StyleSheet, SafeAreaView, } from "react-native";
 import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks/Tasks";
 import Header from "./components/Header";

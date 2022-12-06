@@ -1,5 +1,5 @@
 import React from "react";
-import { TextInput,TouchableOpacity,View,Text } from "react-native";
+import { TextInput,TouchableOpacity,View,Text,Alert, Button } from "react-native";
 import styles from './AddTask.style'
 
 function AddTask({text,setText,tasks,setTasks}){
@@ -27,11 +27,11 @@ function AddTask({text,setText,tasks,setTasks}){
             placeholderTextColor="#86888A"
             />
             <Separator></Separator>
-            <TouchableOpacity 
+            <TouchableOpacity
             style={text.length>0 ? styles.button : styles.buttonPasive}
             onPress={() => addNewTask(text)}>
                 <Text style={styles.buttonText}>KAYDET</Text>
-            </TouchableOpacity>
+            </TouchableOpacity>      
     </View>
     )
 }
